@@ -9,7 +9,9 @@
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "packages/install/conan_toolchain.cmake",
         "STATIC_LINK": false,
-        "CMAKE_BUILD_TYPE":"Release"
+        "CMAKE_BUILD_TYPE":"Release",
+        "CMAKE_CXX_COMPILER":"clang++",
+        "CMAKE_C_COMPILER":"clang"
       }
     },
     {
@@ -18,22 +20,6 @@
       "cacheVariables": {
         "CMAKE_CXX_COMPILER":"clang-cl",
         "CMAKE_C_COMPILER":"clang-cl"
-      }
-    },
-   {
-      "name": "linux",
-      "inherits": "default",
-      "cacheVariables": {
-        "CMAKE_CXX_COMPILER":"clang++",
-        "CMAKE_C_COMPILER":"clang"
-      }
-    },
-    {
-      "name": "osx",
-      "inherits": "default",
-      "cacheVariables": {
-        "CMAKE_CXX_COMPILER":"clang++",
-        "CMAKE_C_COMPILER":"clang"
       }
     }
   ]
