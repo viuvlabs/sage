@@ -10,6 +10,7 @@
 #include <cstdlib>
 #include <filesystem>
 #include <iostream>
+#include <ostream>
 #include <reproc++/reproc.hpp>
 #include <string>
 #include <vector>
@@ -98,10 +99,15 @@ int main(int argc, char* argv[])
         }
         else if (arg.find("run") != std::string::npos)
         {
-            if (arg.size() >= 3)
+            if (args.size() >= 3)
             {
-                run(args[2]);
+                return run(args[2]);
             }
+            else
+            {
+                std::cout << "you have to provide the app you want to run\n";
+            }
+            return 0;
         }
         else if (arg.find("install") != std::string::npos)
         {
