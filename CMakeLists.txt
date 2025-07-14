@@ -7,5 +7,7 @@ include(cmake/config.cmake)
 find_package(fmt)
 find_package(reproc++)
 find_package(cpr)
+find_package(GTest)
 #@add_subproject Warning: Do not remove this line
 add_subdirectory(sage)
+add_subdirectory(tests)
