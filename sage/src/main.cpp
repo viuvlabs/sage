@@ -1,16 +1,18 @@
 // Auto Genrated C++ file by Flick CLI
 // None
-
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
 #include <cpr/cpr.h>
 #include <fmt/base.h>
 #include <fmt/color.h>
 #include <fmt/core.h>
+#include <raylib.h>
 #include <sageconfig.h>
 
 #include <cstdlib>
 #include <filesystem>
 #include <iostream>
-#include <ostream>
+
 #include <reproc++/reproc.hpp>
 #include <string>
 #include <vector>
@@ -86,10 +88,15 @@ int main(int argc, char* argv[])
     auto args = getArgs(argc, argv);
     if (args.size() <= 1)
     {
+        fmt::print(fmt::emphasis::bold | fmt::fg(fmt::color::blanched_almond),
+                   "Available Commands : install, compile, run\n");
+        InitWindow(400, 200, Project::PROJECT_NAME.data());
+        while (!WindowShouldClose())
         {
-            fmt::print(fmt::emphasis::bold | fmt::fg(fmt::color::blanched_almond),
-                       "Available Commands : install, compile, run\n");
-        }
+            BeginDrawing();
+            ClearBackground(YELLOW);
+            EndDrawing();
+        };
     }
     for (const std::string& arg : args)
     {
