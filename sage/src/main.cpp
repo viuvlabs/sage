@@ -15,11 +15,11 @@
 #include <vector>
 
 #ifdef _WIN32
-const std::string PRESET = "windows";
-const std::string EXTENTION=".exe";
+const std::string PRESET    = "windows";
+const std::string EXTENTION = ".exe";
 #else
-const std::string PRESET = "default";
-const std::string EXTENTION="";
+const std::string PRESET    = "default";
+const std::string EXTENTION = "";
 #endif
 std::vector<std::string> getArgs(int argc, char** argv)
 {
@@ -50,14 +50,15 @@ bool compile()
 bool run(std::string name)
 {
     namespace fs = std::filesystem;
-    if (fs::exists("build/" + PRESET + "/" + name+EXTENTION))
+    if (fs::exists("build/" + PRESET + "/" + name + EXTENTION) &&
+        (!fs::is_directory("build/" + PRESET + "/" + name + EXTENTION)))
     {
-        auto path = fs::path("./build/" + PRESET + "/" + name+EXTENTION);
+        auto path = fs::path("./build/" + PRESET + "/" + name + EXTENTION);
         return std::system((path.lexically_normal().string()).c_str());
     };
     if (fs::exists("build/" + PRESET + "/" + name + "/" + name))
     {
-        auto path = fs::path("./build/" + PRESET + "/" + name + "/" + name+EXTENTION);
+        auto path = fs::path("./build/" + PRESET + "/" + name + "/" + name + EXTENTION);
         return std::system((path.lexically_normal().string()).c_str());
     }
 }
