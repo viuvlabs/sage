@@ -6,7 +6,7 @@
 #include <fmt/base.h>
 #include <fmt/color.h>
 #include <fmt/core.h>
-// #include <raylib.h>
+#include <raylib.h>
 #include <sageconfig.h>
 
 #include <cstdlib>
@@ -90,13 +90,13 @@ int main(int argc, char* argv[])
     {
         fmt::print(fmt::emphasis::bold | fmt::fg(fmt::color::blanched_almond),
                    "Available Commands : install, compile, run\n");
-        // InitWindow(400, 200, Project::PROJECT_NAME.data());
-        // while (!WindowShouldClose())
-        // {
-        //     BeginDrawing();
-        //     ClearBackground(YELLOW);
-        //     EndDrawing();
-        // };
+        InitWindow(400, 200, Project::PROJECT_NAME.data());
+        while (!WindowShouldClose())
+        {
+            BeginDrawing();
+            ClearBackground(YELLOW);
+            EndDrawing();
+        };
     }
     for (const std::string& arg : args)
     {
