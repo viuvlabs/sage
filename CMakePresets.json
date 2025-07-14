@@ -8,7 +8,8 @@
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "packages/install/conan_toolchain.cmake",
-        "STATIC_LINK": false
+        "STATIC_LINK": false,
+        "CMAKE_BUILD_TYPE":"Release"
       }
     },
     {
@@ -16,8 +17,7 @@
       "inherits": "default",
       "cacheVariables": {
         "CMAKE_CXX_COMPILER":"clang-cl",
-        "CMAKE_C_COMPILER":"clang-cl",
-        "CMAKE_BUILD_TYPE":"Release"
+        "CMAKE_C_COMPILER":"clang-cl"
       }
     },
    {
@@ -25,8 +25,7 @@
       "inherits": "default",
       "cacheVariables": {
         "CMAKE_CXX_COMPILER":"clang++",
-        "CMAKE_C_COMPILER":"clang",
-        "CMAKE_BUILD_TYPE":"Release"
+        "CMAKE_C_COMPILER":"clang"
       }
     },
     {
@@ -34,8 +33,7 @@
       "inherits": "default",
       "cacheVariables": {
         "CMAKE_CXX_COMPILER":"clang++",
-        "CMAKE_C_COMPILER":"clang",
-        "CMAKE_BUILD_TYPE":"Release"
+        "CMAKE_C_COMPILER":"clang"
       }
     }
   ]
