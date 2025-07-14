@@ -53,13 +53,11 @@ bool run(std::string name)
     if (fs::exists("build/" + PRESET + "/" + name + EXTENTION) &&
         (!fs::is_directory("build/" + PRESET + "/" + name + EXTENTION)))
     {
-      fmt::println("first");
         auto path = fs::path("./build/" + PRESET + "/" + name + EXTENTION);
         return std::system((path.lexically_normal().string()).c_str());
     };
     if (fs::exists("build/" + PRESET + "/" + name + "/" + name))
     {
-         fmt::println("second");
         auto path = fs::path("./build/" + PRESET + "/" + name + "/" + name + EXTENTION);
         return std::system((path.lexically_normal().string()).c_str());
     }
