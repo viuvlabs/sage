@@ -5,5 +5,7 @@ project(sage VERSION 0.1.0 LANGUAGES CXX)
 include(cmake/config.cmake)
 #@add_find_package Warning: Do not remove this line
 find_package(fmt)
+find_package(reproc++)
+find_package(cpr)
 #@add_subproject Warning: Do not remove this line
 add_subdirectory(sage)

@@ -1,5 +1,7 @@
 [requires]
 fmt/11.2.0
+reproc/14.2.5
+cpr/1.11.2
 
 [generators]
 CMakeDeps
