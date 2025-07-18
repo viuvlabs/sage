@@ -67,16 +67,16 @@ bool run(std::string name)
 bool installPackages()
 {
     namespace fs = std::filesystem;
-    if (fs::exists("packages/requirement.txt"))
+    if (fs::exists("packages/requirements.txt"))
     {
         std::string cmdString(
-            "conan install packages/requirement.txt --output-folder packages/install --build=missing");
+            "conan install packages/requirements.txt --output-folder packages/install --build=missing");
         return std::system(cmdString.c_str());
     }
     else
     {
         fmt::print(fmt::emphasis::bold | fmt::fg(fmt::color::rebecca_purple),
-                   "error : failed to find packages/requirement.txt\n");
+                   "error : failed to find packages/requirements.txt\n");
         return false;
     }
 }
