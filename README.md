@@ -1,4 +1,4 @@
-
+[![CMake on multiple platforms](https://github.com/viuvlabs/sage/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/viuvlabs/sage/actions/workflows/cmake-multi-platform.yml)
 
 # Sage: The Unified C/C++ Orchestrator
 
