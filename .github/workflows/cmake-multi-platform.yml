@@ -15,5 +15,5 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
     - name: build project using sage by ViuvLabs
-    - run: pip install cppsage && sage doctor && sage compile
+      run: pip install cppsage && sage doctor && sage compile
     
