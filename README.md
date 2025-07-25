@@ -32,7 +32,7 @@ Getting started with Sage is designed to be straightforward.
 You can install Sage via pip:
 
 ```bash
-pip install sage
+pip install cppsage
 ````
 
 ### Quick Start
