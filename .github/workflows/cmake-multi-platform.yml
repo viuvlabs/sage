@@ -14,6 +14,8 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
     - name: build project using sage by ViuvLabs
-    - run: pip install cppsage && sage doctor && sage compile
+      run: pip install cppsage && sage doctor && sage compile
     
